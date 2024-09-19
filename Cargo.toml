@@ -1,0 +1,21 @@
+[package]
+name = "sorm"
+version = "0.1.2"
+edition = "2021"
+description = "Simple ORM (Object-Relational Mapping) built on SQLx"
+license = "MIT"
+repository = "https://github.com/luoshuqi/sorm"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.21"
+sorm-macros = { path = "sorm-macros" }
+sqlx = "0.8.2"
+thiserror = "1.0.59"
+
+[features]
+test = []
+sqlite = ["sqlx/sqlite"]
+mysql = ["sqlx/mysql"]
+postgres = ["sqlx/postgres"]
